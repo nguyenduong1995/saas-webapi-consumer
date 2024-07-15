@@ -1,0 +1,25 @@
+{
+  "$id": "https://consumerapi.ipisaas.com/schema/product_resource_delete.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "productVariationId",
+    "productResourceIds"
+  ],
+  "properties": {
+    "productVariationId": {
+        "type": "integer",
+        "description": "id product variation.",
+        "minimum": 0
+    },
+    "productResourceIds": {
+        "type": "array",
+        "description": "list of product Resource Id.",
+        "items": {
+            "type": "integer"
+         }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "https://consumerapi.ipisaas.com/schema/product_create.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "name",
+    "productCode",
+    "brandId",
+    "categroyIds"
+  ],
+  "properties": {
+    "brandId": {
+      "type": "integer",
+      "description": "id brand.",
+      "mininum": 0
+    },
+    "categroyIds": {
+      "type": "array",
+      "description": "list of category ids.",
+      "items": {
+         "type": "integer"
+       }
+    }
+  },
+  "additionalProperties": true
+}

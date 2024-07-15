@@ -1,0 +1,11 @@
+/target/
+/bin/
+.classpath
+.project
+.settings
+.checkstyle
+node_modules
+hs_err_pid*.log
+replay*.log
+logs
+/.metadata/

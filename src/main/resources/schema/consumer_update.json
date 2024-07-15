@@ -1,0 +1,30 @@
+{
+  "$id": "https://example.com/schema/consumer_update.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "email",
+    "mobile",
+    "fullname"
+  ],
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "Email ",
+      "format": "email",
+      "maxLength": 200
+    },
+    "mobile": {
+      "type": "string",
+      "description": "Mobile ",
+      "pattern": "^(03|07|08|09|01[2|6|8|9])+([0-9]{8})$"
+    },
+    "fullname": {
+      "type": "string",
+      "description": "Fullname ",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,35 @@
+{
+  "$id": "https://consumerapi.ipisaas.com/schema/consumer_address_create.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "mobile",
+    "wardId",
+    "cityId",
+    "districtId"
+  ],
+  "properties": {
+    "mobile": {
+      "type": "string",
+      "description": "mobile",
+      "pattern": "^(03|07|08|09|01[2|6|8|9])+([0-9]{8})$"
+    },
+    "wardId": {
+      "type": "integer",
+      "description": "id ward.",
+      "mininum": 0
+    },
+    "cityId": {
+      "type": "integer",
+      "description": "id city.",
+      "mininum": 0
+    },
+    "districtId": {
+      "type": "integer",
+      "description": "id district.",
+      "mininum": 0
+    }
+  },
+  "additionalProperties": true
+}

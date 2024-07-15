@@ -1,0 +1,32 @@
+{
+  "$id": "https://consumerapi.ipisaas.com/schema/login.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "loginType",
+    "loginName",
+    "password"
+  ],
+  "properties": {
+    "loginType": {
+      "type": "number",
+      "description": "Login Type",
+      "min": 0,
+      "max": 1
+    },
+    "loginName": {
+      "type": "string",
+      "description": "Login Name or Mobile",
+      "minLength": 8,
+      "maxLength": 128
+    },
+    "password": {
+      "type": "string",
+      "description": "Password.",
+      "minLength": 8,
+      "maxLength": 32
+    }
+  },
+  "additionalProperties": false
+}

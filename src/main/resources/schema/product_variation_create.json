@@ -1,0 +1,109 @@
+{
+  "$id": "https://consumerapi.ipisaas.com/schema/product_variation_create.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "title": "Rules",
+  "type": "object",
+  "required": [
+    "productId",
+    "name",
+    "description",
+    "sku",
+    "attributes",
+    "price",
+    "virtualPrice",
+    "incomePrice",
+    "packingPrice",
+    "unitId",
+    "packingId",
+    "minOrder",
+    "orderInc",
+    "packingExchangeRatio"
+  ],
+  "properties": {
+    "productId": {
+        "type": "integer",
+        "description": "id product.",
+        "minimum": 0
+    },
+    "name": {
+        "type": "string",
+        "maxLength": 512,
+        "description": "name of product variation."
+    },
+    "description": {
+        "type": "string",
+        "description": "description of product variation."
+    },
+    "sku": {
+        "type": "string",
+        "description": "sku of product variation."
+    },
+    "attributes": {
+        "type": "array",
+        "description": "list of attributes.",
+        "items": {
+            "type": "object",
+            "required" : [
+                "attributeId",
+                "attributeTypeId"
+            ],
+            "properties": {
+            "attributeId": {
+                "type": "integer",
+                "description": "id of attribute."
+            },
+            "attributeTypeId": {
+                "type": "integer",
+                "description": "id of attribute type."
+            }
+         }
+       }
+    },
+    "price": {
+        "type": "integer",
+        "description": "price of product variation.",
+        "minimum": 0
+    },
+    "virtualPrice": {
+        "type": "integer",
+        "description": "virtual price of product variation.",
+        "minimum": 0
+    },
+    "incomePrice": {
+        "type": "integer",
+        "description": "income price of product variation.",
+        "minimum": 0
+    },
+    "packingPrice": {
+        "type": "integer",
+        "description": "packing price of product variation.",
+        "minimum": 0
+    },
+    "unitId": {
+        "type": "integer",
+        "description": "unit price of product variation.",
+        "minimum": 0
+    },
+    "packingId": {
+        "type": "integer",
+        "description": "Id packing.",
+        "minimum": 0
+    },
+    "minOrder": {
+        "type": "integer",
+        "description": "min order of product variation.",
+        "minimum": 0
+    },
+    "orderInc": {
+        "type": "integer",
+        "description": "order inc of product variation.",
+        "minimum": 0
+    },
+    "packingExchangeRatio": {
+        "type": "integer",
+        "description": "packing exchange ratio of product variation.",
+        "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}
